@@ -1,0 +1,15 @@
+.idea
+# Ignore Gradle project-specific cache directory
+app/.gradle
+
+# Ignore Gradle build output directory
+app/build
+
+app/**/logs/
+
+app/.settings
+app/bin
+app/.project*
+app/.classpath
+app/.idea/
+app/.factorypath
