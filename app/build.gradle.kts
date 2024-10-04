@@ -1,6 +1,8 @@
 plugins {
     id("java")
     application
+    kotlin("jvm") version "1.7.10"
+    id("checkstyle")
 }
 
 group = "hexlet.code"
@@ -21,4 +23,8 @@ tasks.test {
 
 application {
     mainClass = "hexlet.code.App"
+}
+
+tasks.getByName<JavaExec>("run") {
+    standardInput = System.`in`
 }
