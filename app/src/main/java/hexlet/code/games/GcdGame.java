@@ -3,9 +3,9 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class GcdGame implements Game {
-    protected final String question;
+    private final String question;
 
-    protected final String correctAnswer;
+    private final String correctAnswer;
 
     private static final int MAX_NUMBER = 101;
 

@@ -3,22 +3,22 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class ProgressionGame implements Game {
-    protected final String question;
+    private final String question;
 
-    protected final String correctAnswer;
+    private final String correctAnswer;
 
     private static final int MAX_NUMBER = 50;
     private static final int STEP = 50;
+    private static final int PROGRESSION_LENGTH = 10;
 
     public ProgressionGame() {
         Random random = new Random();
         int firstNumber = random.nextInt(MAX_NUMBER);
         int step = random.nextInt(STEP) + 1;
-        int progressionLength = 10;
-        int hiddenIndex = random.nextInt(progressionLength);
-        int[] progression = new int[progressionLength];
+        int hiddenIndex = random.nextInt(PROGRESSION_LENGTH);
+        int[] progression = new int[PROGRESSION_LENGTH];
         progression[0] = firstNumber;
-        for (int i = 1; i < progressionLength; i++) {
+        for (int i = 1; i < PROGRESSION_LENGTH; i++) {
             progression[i] = progression[i - 1] + step;
         }
         int hiddenNumber = progression[hiddenIndex];
