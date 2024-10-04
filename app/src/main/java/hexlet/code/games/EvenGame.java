@@ -15,7 +15,7 @@ public class EvenGame implements Game {
     }
 
     public static String getGreeting() {
-        return "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
     public String getQuestion() {
