@@ -7,10 +7,12 @@ public class CalcGame implements Game {
 
     protected final String correctAnswer;
 
+    private static final int MAX_NUMBER = 101;
+
     public CalcGame() {
         Random random = new Random();
-        int randomNumber1 = random.nextInt(101);
-        int randomNumber2 = random.nextInt(101);
+        int randomNumber1 = random.nextInt(MAX_NUMBER);
+        int randomNumber2 = random.nextInt(MAX_NUMBER);
         String[] operations = {"+", "-", "*"};
         int randomIndex = random.nextInt(operations.length);
         String operation = operations[randomIndex];
@@ -30,18 +32,35 @@ public class CalcGame implements Game {
         }
     }
 
+    /**
+     * Gets the greeting of the game.
+     * @return The greeting.
+     */
     public static String getGreeting() {
         return "What is the result of the expression?";
     }
 
+    /**
+     * Gets the question of the game.
+     * @return The question.
+     */
     public String getQuestion() {
         return question;
     }
 
+    /**
+     * Gets the correct answer for the question.
+     * @return The correct answer.
+     */
     public String getCorrectAnswer() {
         return correctAnswer;
     }
 
+    /**
+     * Checks if the given answer is correct.
+     * @param answer The user's answer.
+     * @return {@code true} if the answer is correct, {@code false} otherwise.
+     */
     public boolean isCorrectAnswer(String answer) {
         return correctAnswer.equals(answer);
     }
